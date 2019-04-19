@@ -15,28 +15,6 @@ function fbPostFunc(){
       barbieLogoImg: 'images/barbie-logo-img.jpg',
       fbCheckLogoIcon: 'images/fb-check-logo-1.png',
       earthLogoIcon: 'images/earth-logo-img-1.png',
-      navItems: [
-        {
-          name: 'Save Post',
-          url: '#',
-          saveIcon: 'fa fa-save'
-        },{
-          name: 'View edit history',
-          url: '#',
-        },{
-          name: 'Embed',
-          url: '#'
-        },{
-          name: 'Turn on notifications for post',
-          url: '#'
-        },{
-          name: 'Show in tab',
-          url: '#'
-        },{
-          name:'Give feedback on this post',
-          url:'#'
-        }
-      ]        
     },
     barbieHashtagVar: {
       name: '#Barbie',
