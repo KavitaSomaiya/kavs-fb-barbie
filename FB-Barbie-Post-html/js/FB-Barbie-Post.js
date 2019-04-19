@@ -3,67 +3,164 @@
 function bodyOnLoadFuncs(){
   mostReleventBtnPopoverFunc();
   //likeBtnPopoverFunc();
-  imagesPostFunc();
-  likeCmntShareGroupFunc();
-}
-function likeCmntShareGroupFunc(){
+  fbPostFunc();
   
-  var likeCmntShareGroupStrng = ''
-  var likeBtnChild = ''
-  const likeCmntShareGroupVar = [
-    {
-      faEmoji = 'far fa-thumbs-up',
-      name = 'Like',
-      children = [
+}
+
+  
+function fbPostFunc(){
+  var fbPostStrng=''
+  const fbPost = [{
+    navbarVar: [{
+      barbieLogoImg: 'images/barbie-logo-img.jpg',
+      fbCheckLogoIcon: 'images/fb-check-logo-1.png',
+      earthLogoIcon: 'images/earth-logo-img-1.png',
+      saveIcon: 'fa fa-save',
+      navItems: [
         {
-          
+          name: 'Save Post',
+          url: '#'
+        },{
+          name: 'View edit history',
+          url: '#',
+        },{
+          name: 'Embed',
+          url: '#'
+        },{
+          name: 'Turn on notifications for post',
+          url: '#'
+        },{
+          name: 'Show in tab',
+          url: '#'
+        },{
+          name:'Give feedback on this post',
+          url:'#'
         }
-      ]
+      ]        
+    }],
+    barbieHashtagVar: [
+      {
+        name: '#Barbie',
+        blueHeartLogoIcon: 'images/blue-heart-logo-1.png',
+        barbieMainImg: 'images/barbie-img-for-html.jpg',
+      }
+    ],
+    postPopularity: {
+        likes: 158,
+        comments: 100,
+        shares: 50,
+        views:20
     },
-    {
-      faEmoji = 'far fa-comment-alt',
-      name = 'Comment',
-      title = 'Leave a comment',
-      dataToggle = 'tooltip'
-    },
-    {
-      faEmoji = 'fas fa-share',
-      name = 'Share',
-      title = 'Share this to friends or post it on your timeline.',
-      dataToggle = 'tooltip'
-    }
-  ]
-  likeCmntShareGroupVar.forEach (element => {
-    if (name === 'Like') {
-      likeCmntShareGroupStrng =
-        `
-        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-          <button class="btn btn-outline-secondary border-0 " 
-                    rel="popover"
-                    id="loginn"
-                    data-container="body"
-                    data-placement="top"
-                    data-html="true"
-                    data-trigger="hover"
-                    type="button">
-            <i class='${Element.faEmoji}' aria-hidden='true'></i>
-            ${Element.name}
-          </button>
-        </div>
-        `
-    } else {
-      likeCmntShareGroupStrng +=
-        `
-        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-          <button class="btn btn-outline-secondary border-0" type="button" title='${Element.title}' data-toggle='${Element.dataToggle}'>
-            <i class='${Element.faEmoji}' aria-hidden="true"></i>
-            ${Element.name}
-          </button>
-        </div>
-        `
-    }
-  });
-  document.querySelector("#likeCmntShareBtnGroupId").innerHTML = likeCmntShareGroupStrng
+    likeCmntShareIconsVar: [
+      {
+        likeBtn: [
+          {
+            name: 'Like',
+            icon: 'far fa-thumbs-up',                
+            likeEmoji: [
+              {
+                heart: 'fa fa-heart',
+                grinBeam: 'fas fa-grin-beam',
+                rollingEyes: 'fas fa-meh-rolling-eyes',
+                sadTear: 'fas fa-sad-tear',
+                angry: 'fas fa-angry'
+              }
+            ]
+          }
+        ],
+        commentBtn: [
+          {
+            name: 'Comment',
+            icon: 'far fa-comment-alt'
+          }
+        ],
+        shareBtn: [
+          {
+            name: 'Share',
+            icon: 'fas fa-share'
+          }
+        ]
+      }
+    ],     
+    mostRelevantBtn: [
+      {
+        name: 'Most Relevant',
+        hiddenBlckId: 'mostReleventContentLogin',
+        hiddenBlck: [
+          {
+            h6: 'Most Relevant',
+            p: 'Comments form friends and those with the most views, reactions, replies and more appear at the top.'
+          },
+          {
+            h6: 'New',
+            P: 'New comments and those with new replies appear at the top.'
+          },
+          {
+            h6: 'All Comments',
+            p: 'All comments including comments in foreign languages and potential spam are shown.'
+          }
+        ]
+      }
+    ],
+    commentsBlock: [
+      {
+        userImg: 'https://thispersondoesnotexist.com/image',
+        writeCmntBlck: [
+          {
+            placeHolder: 'Write a comment...',
+            Icons: [
+              {
+                smileIcon: 'far fa-smile',
+                cameraIcon: 'fas fa-camera',
+                gitIcon: 'fab fa-git-square',
+                stickyNoteIcon: 'fa fa-sticky-note'
+              }
+            ]
+          }
+        ],
+        showedCmntsBlock: [
+          {
+            comment: 'Nice',
+            commentUser: 'Abc',
+          },
+          {
+            comment: 'good',
+            commentUser: 'xyx',
+          },
+          {
+            comment: 'very nice',
+            commentUser: 'ddd',
+          }
+        ],
+        hiddenCmntsBlock: [
+          {
+            comment: 'beautiful',
+            commentUser: 'mno',
+          },
+          {
+            comment: 'nice',
+            commentUser: 'hhh',
+          },
+          {
+            comment: 'amazing',
+            commentUser: 'ccc',
+          }
+        ],
+        viewPreviousCmntsBtn: [
+          {
+            name: 'View Previous Comments',
+            funcName: 'viewPreviousCommentsFunc();'
+          }
+        ]
+      }
+    ]
+  }]
+  
+fbPost.forEach(element => {
+  fbPostStrng += ``
+});
+document.querySelector('#fbPostId').innerHTML = fbPostStrng
+  
 }
 
 
@@ -74,39 +171,11 @@ function mostReleventBtnPopoverFunc(){
       html: true,
       content: function() {
         var id = $(this).attr('id')
-          return $('#most-relevent-content-' + id).html();
+          return $('#mostReleventContent' + id).html();
         }
       });
     });
   }
-
-function imagesPostFunc(){
-  var imagesPostVar = [{
-    
-    barbieLogoImgSrc: 'images/barbie-logo-img.jpg',
-    fbCheckLogoImgSrc: 'images/fb-check-logo-1.png',
-    earthLogoImgSrc: 'images/earth-logo-img-1.png',
-    blueHeartLogoImgSrc: 'images/blue-heart-logo-1.png',
-    barbieMainImgSrc: 'images/barbie-img-for-html.jpg'
-  }]
-  var barbieLogoImgString = '',
-      fbCheckLogoImgString = '',
-      earthLogoImgString = ''
-      blueHeartLogoImgString = '' 
-      barbieMainImgString = ''
-  imagesPostVar.forEach(element => {
-    barbieLogoImgString = `<img class='rounded-circle navbar-brand-img' alt src='${Element.barbieLogoImgSrc}'>`
-    fbCheckLogoImgString  = `<img class='check-logo-img' src='${Element.fbCheckLogoImgSrc}' alt />`
-    earthLogoImgString = `<img class='earth-logo-img' src='${Element.earthLogoImgSrc}' alt />`
-    blueHeartLogoImgString = `<img class='blue-heart-logo-img' src='${Element.blueHeartLogoImgSrc}' alt />`
-    barbieMainImgString = `<img class='mw-100 w-100 h-auto' alt src='${Element.barbieMainImgSrc}' />`
-  });
-  document.querySelector('#barbieLogoImgId').innerHTML = barbieLogoImgString
-  document.querySelector('#fbCheckLogoImgId').innerHTML = fbCheckLogoImgString
-  document.querySelector('#earthLogoImgId').innerHTML = earthLogoImgString
-  document.querySelector('#blueHeartLogoImgId').innerHTML = blueHeartLogoImgString
-  //document.querySelector('#barbieMainImgId').innerHTML = barbieMainImgString
-}
 
 
 
