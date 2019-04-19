@@ -11,15 +11,15 @@ function bodyOnLoadFuncs(){
 function fbPostFunc(){
   var fbPostStrng=''
   const fbPost = [{
-    navbarVar: [{
+    navbarVar: {
       barbieLogoImg: 'images/barbie-logo-img.jpg',
       fbCheckLogoIcon: 'images/fb-check-logo-1.png',
       earthLogoIcon: 'images/earth-logo-img-1.png',
-      saveIcon: 'fa fa-save',
       navItems: [
         {
           name: 'Save Post',
-          url: '#'
+          url: '#',
+          saveIcon: 'fa fa-save'
         },{
           name: 'View edit history',
           url: '#',
@@ -37,14 +37,12 @@ function fbPostFunc(){
           url:'#'
         }
       ]        
-    }],
-    barbieHashtagVar: [
-      {
-        name: '#Barbie',
-        blueHeartLogoIcon: 'images/blue-heart-logo-1.png',
-        barbieMainImg: 'images/barbie-img-for-html.jpg',
-      }
-    ],
+    },
+    barbieHashtagVar: {
+      name: '#Barbie',
+      blueHeartLogoIcon: 'images/blue-heart-logo-1.png',
+      barbieMainImg: 'images/barbie-img-for-html.jpg'
+    },
     postPopularity: {
         likes: 158,
         comments: 100,
@@ -53,107 +51,81 @@ function fbPostFunc(){
     },
     likeCmntShareIconsVar: [
       {
-        likeBtn: [
-          {
-            name: 'Like',
-            icon: 'far fa-thumbs-up',                
-            likeEmoji: [
-              {
-                heart: 'fa fa-heart',
-                grinBeam: 'fas fa-grin-beam',
-                rollingEyes: 'fas fa-meh-rolling-eyes',
-                sadTear: 'fas fa-sad-tear',
-                angry: 'fas fa-angry'
-              }
-            ]
+        name: 'Like',
+        icon: 'far fa-thumbs-up',                
+        likeEmoji: {
+            heart: 'fa fa-heart',
+            grinBeam: 'fas fa-grin-beam',
+            rollingEyes: 'fas fa-meh-rolling-eyes',
+            sadTear: 'fas fa-sad-tear',
+            angry: 'fas fa-angry'
           }
-        ],
-        commentBtn: [
-          {
-            name: 'Comment',
-            icon: 'far fa-comment-alt'
-          }
-        ],
-        shareBtn: [
-          {
-            name: 'Share',
-            icon: 'fas fa-share'
-          }
-        ]
+      },{
+        name: 'Comment',
+        icon: 'far fa-comment-alt'
+      },{
+        name: 'Share',
+        icon: 'fas fa-share'
       }
     ],     
-    mostRelevantBtn: [
-      {
-        name: 'Most Relevant',
-        hiddenBlckId: 'mostReleventContentLogin',
-        hiddenBlck: [
-          {
-            h6: 'Most Relevant',
-            p: 'Comments form friends and those with the most views, reactions, replies and more appear at the top.'
-          },
-          {
-            h6: 'New',
-            P: 'New comments and those with new replies appear at the top.'
-          },
-          {
-            h6: 'All Comments',
-            p: 'All comments including comments in foreign languages and potential spam are shown.'
-          }
-        ]
+    mostRelevantBtn: {
+      name: 'Most Relevant',
+      hiddenBlckId: 'mostReleventContentLogin',
+      hiddenBlck: [
+        {
+          h6: 'Most Relevant',
+          p: 'Comments form friends and those with the most views, reactions, replies and more appear at the top.'
+        },
+        {
+          h6: 'New',
+          P: 'New comments and those with new replies appear at the top.'
+        },
+        {
+          h6: 'All Comments',
+          p: 'All comments including comments in foreign languages and potential spam are shown.'
+        }
+      ]
+    },
+    commentsBlock: {
+      userImg: 'https://thispersondoesnotexist.com/image',
+      writeCmntBlck: {
+        placeHolder: 'Write a comment...',
+        Icons: {
+          smileIcon: 'far fa-smile',
+          cameraIcon: 'fas fa-camera',
+          gitIcon: 'fab fa-git-square',
+          stickyNoteIcon: 'fa fa-sticky-note'
+        }
+      },
+      showedCmntsBlock: [
+        {
+          comment: 'Nice',
+          commentUser: 'Abc',
+        },{
+          comment: 'good',
+          commentUser: 'xyx',
+        },{
+          comment: 'very nice',
+          commentUser: 'ddd',
+        }
+      ],
+      hiddenCmntsBlock: [
+        {
+          comment: 'beautiful',
+          commentUser: 'mno',
+        },{
+          comment: 'nice',
+          commentUser: 'hhh',
+        },{
+          comment: 'amazing',
+          commentUser: 'ccc',
+        }
+      ],
+      viewPreviousCmntsBtn: {
+        name: 'View Previous Comments',
+        funcName: 'viewPreviousCommentsFunc();'
       }
-    ],
-    commentsBlock: [
-      {
-        userImg: 'https://thispersondoesnotexist.com/image',
-        writeCmntBlck: [
-          {
-            placeHolder: 'Write a comment...',
-            Icons: [
-              {
-                smileIcon: 'far fa-smile',
-                cameraIcon: 'fas fa-camera',
-                gitIcon: 'fab fa-git-square',
-                stickyNoteIcon: 'fa fa-sticky-note'
-              }
-            ]
-          }
-        ],
-        showedCmntsBlock: [
-          {
-            comment: 'Nice',
-            commentUser: 'Abc',
-          },
-          {
-            comment: 'good',
-            commentUser: 'xyx',
-          },
-          {
-            comment: 'very nice',
-            commentUser: 'ddd',
-          }
-        ],
-        hiddenCmntsBlock: [
-          {
-            comment: 'beautiful',
-            commentUser: 'mno',
-          },
-          {
-            comment: 'nice',
-            commentUser: 'hhh',
-          },
-          {
-            comment: 'amazing',
-            commentUser: 'ccc',
-          }
-        ],
-        viewPreviousCmntsBtn: [
-          {
-            name: 'View Previous Comments',
-            funcName: 'viewPreviousCommentsFunc();'
-          }
-        ]
-      }
-    ]
+    }
   }]
   
 fbPost.forEach(element => {
