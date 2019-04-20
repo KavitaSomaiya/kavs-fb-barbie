@@ -4,16 +4,15 @@ function bodyOnLoadFuncs(){
   mostReleventBtnPopoverFunc();
   likeBtnPopoverFunc();
   fbPostFunc();
-  
 }
 
   
 function fbPostFunc(){
-  var fbPostStrng=''
   const fbPost = [{
     navImages: {
       barbieLogoImg: 'images/barbie-logo-img.jpg',
       fbCheckLogoIcon: 'images/fb-check-logo-1.png',
+      postDate:  'September 18, 2018',
       earthLogoIcon: 'images/earth-logo-img-1.png',
       saveIcon: 'fa fa-save'
     },
@@ -34,33 +33,87 @@ function fbPostFunc(){
         {
           comment: 'Nice',
           commentUser: 'Abc',
+          userImg: 'https://thispersondoesnotexist.com/image',
         },{
           comment: 'good',
           commentUser: 'xyx',
+          userImg: 'https://thispersondoesnotexist.com/image',
         },{
           comment: 'very nice',
           commentUser: 'ddd',
+          userImg: 'https://thispersondoesnotexist.com/image',
         }
       ],
       hiddenCmntsBlock: [
         {
           comment: 'beautiful',
           commentUser: 'mno',
+          userImg: 'https://thispersondoesnotexist.com/image',
         },{
           comment: 'nice',
           commentUser: 'hhh',
+          userImg: 'https://thispersondoesnotexist.com/image',
         },{
           comment: 'amazing',
           commentUser: 'ccc',
+          userImg: 'https://thispersondoesnotexist.com/image',
         }
       ]
     }
   }]
-  
+  var hiddenCmntsBlckImg=''
+  var hiddenCmntsBlckUserCmnt=''
+  var shwdCmntsBlckImg=''
+  var shwdCmntsBlckUserCmnt=''
+  var fbPostStrng=''
 fbPost.forEach(element => {
-  fbPostStrng += 
-  `
+  if (element.showedCmntsBlock) {
+    element.showedCmntsBlock.forEach (child => {
+      shwdCmntsBlckImg += `<img class="rounded-circle" alt src='${element.commentsBlock.showedCmntsBlock.userImg}' />`
+      shwdCmntsBlckUserCmnt += `${element.showedCmntsBlock.commentUser} ${element.showedCmntsBlock.comment}`
+      
+      fbPostStrng +=
+      `
+      <div class="d-flex">
+          <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+            ${shwdCmntsBlckImg}
+          </div>
+          <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
+            <label class="label-group mb-3 form-control border-0">
+              <span class="mt-1">
+                ${shwdCmntsBlckUserCmnt}
+              </span>
+            </label>
+          </form>
+        </div>
+      `    
+    }) 
+  } else if (element.hiddenCmntsBlock) {
+      element.hiddenCmntsBlock.forEach (child => {
+        hiddenCmntsBlckImg += `<img class="rounded-circle" alt src='${element.commentsBlock.hiddenCmntsBlock.userImg}' />`
+        hiddenCmntsBlckUserCmnt += `${element.hiddenCmntsBlock.commentUser} ${element.hiddenCmntsBlock.comment}`
+        
+        fbPostStrng +=
+        `
+        <div class="d-flex">
+            <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+              ${hiddenCmntsBlckImg}
+            </div>
+            <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
+              <label class="label-group mb-3 form-control border-0">
+                <span class="mt-1">
+                ${hiddenCmntsBlckUserCmnt}
+                </span>
+              </label>
+            </form>
+          </div>
+        `
+      })
+    } else {
+    
+    fbPostStrng +=
 
+  `
   <header>
     <section class="m-0 p-0 cust-outline-0 border-0 w-100 mw-100 h-auto">
       <div class="container">
@@ -75,7 +128,8 @@ fbPost.forEach(element => {
                       <img class="check-logo-img" src='${element.navImages.fbCheckLogoIcon}' alt />
                     </span>
                   </h6>
-                  <p class="mt-1 p-0">September 18, 2018
+                  <p class="mt-1 p-0">
+                    ${element.navImages.postDate}
                     <span id="earthLogoImgId">
                       <img class="earth-logo-img" src='${element.navImages.earthLogoIcon}' alt />
                     </span>
@@ -262,33 +316,10 @@ fbPost.forEach(element => {
 
           <div class="cust-container-2 py-1 w-100">
             <div class="showed-cmnt-block">
-              <div class="d-flex">
-                <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                  <img class="rounded-circle" alt src='${element.commentsBlock.userImg}' />
-                </div>
-                <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                  <label class="label-group mb-3 form-control border-0">
-                    <span class="mt-1">
-                      comment
-                    </span>
-                  </label>
-                </form>
-              </div>                             
             </div>
-            <div class="hidden-cmnt-block" id="hiddenCmntDivId">
-              <div class="d-flex">
-                <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                  <img class="rounded-circle" alt src='${element.commentsBlock.userImg}' />
-                </div>
-                <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                  <label class="label-group mb-3 form-control border-0">
-                    <span class="mt-1">
-                      comment
-                    </span>
-                  </label>
-                </form>
-              </div>
+            <div class="hidden-cmnt-block">
             </div>
+          </div>
 
             <div class="view-previous-comment-button btn-group py-1 dropdown w-100">
               <button class="btn btn-outline-secondary border-0 w-100" type="button" role="button" onclick="viewPreviousCommentsFunc();">
@@ -304,9 +335,9 @@ fbPost.forEach(element => {
 
 
   `
+  }
 });
 document.querySelector('#fbPostId').innerHTML = fbPostStrng
-  
 }
 
 
