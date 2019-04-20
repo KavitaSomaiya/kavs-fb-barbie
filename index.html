@@ -32,9 +32,9 @@
     
   </head>
   
-  <body onload='bodyOnLoadFuncs();'>
+  <body onload='bodyOnLoadFuncs();' id="fbPostId"> 
 
-  <header>
+   <!-- <header>
     <section class="m-0 p-0 cust-outline-0 border-0 w-100 mw-100 h-auto">
       <div class="container">
         <div class="cust-container-2">
@@ -42,18 +42,381 @@
               <a class="navbar-brand d-flex mt-3" href="#" >
                 <div id="barbieLogoImgId">
                 </div>
-                  <!-- <img class="rounded-circle navbar-brand-img" id="barbieLogoImgId" alt /> -->
+                  <img class="rounded-circle navbar-brand-img" id="barbieLogoImgId" alt />
                   <div class="ml-3 d-flex flex-column">
                       <h6 class="m-0 p-0">
                           Barbie
                           <span class="p-0 m-0" id="fbCheckLogoImgId">
-                            <!-- <img class="check-logo-img" src="images/fb-check-logo-1.png" alt /> -->
+                            <img class="check-logo-img" src="images/fb-check-logo-1.png" alt />
                           </span>
                         </h6>
                         <p class="mt-1 p-0">September 18, 2018
                           <span id="earthLogoImgId">
-                            <!-- <img class="earth-logo-img" src="images/earth-logo-img-1.png" alt /> -->
+                            <img class="earth-logo-img" src="images/earth-logo-img-1.png" alt />
                           </span>
+                        </p>
+                  </div>
+                  
+              </a>
+              <button class="navbar-toggler navbar-toggler-right mt-0" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse border" id="collapsibleNavbar">
+                <ul class="nav navbar-nav w-100">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="fa fa-save mr-1" aira-hidden="true"></i>
+                      Save Post
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">View edit history</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Embed</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Turn on notifications for post</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Show in tab</a>
+                  </li>
+                  <div class="dropdown-divider px-0"></div>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Give feedback on this post</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </header> -->
+
+
+
+    <!-- <main>
+      <article>
+        <section class="p-0 m-0 cust-outline-0 border-0 w-100 mw-100 h-auto">
+          <div class="container">
+            <div class="cust-container-2">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="d-flex flex-column">
+                  <p id="barbieHashtagId">
+                    For <span class="barbie-hashtag">
+                          <a href="#">#Barbie</a>
+                        </span> 
+                        movie time is always fun time! Which are you planning to watch with your bestie?
+                        <span id="blueHeartLogoImgId">
+                          <img class="blue-heart-logo-img" src="images/blue-heart-logo-1.png" alt />
+                        </span>
+                  </p>
+                </div>
+            </div>
+            <span id="barbieMainImgId">
+              <img class="mw-100 w-100 h-auto" alt src="images/barbie-img-for-html.jpg" />
+            </span>
+            <div class="cust-container-2 px-3 pt-3">
+              <div class="d-flex">
+                    <p class="mr-auto">13k</p>
+                    <p class="ml-auto">2.1K Comments  167 shares  133K views</p>
+                </div>
+            </div>
+
+            <div class="col-12 mx-auto">
+              <div class="container">
+                <div class="border-bottom"></div>
+              </div>
+            </div>
+
+            
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="cust-container-2 py-3 like-cmnt-share-btn-group">
+                <div class="row justify-content-between btn-group text-center" id="likeCmntShareBtnGroupId">
+                
+
+                  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <button class="btn btn-outline-secondary border-0 " 
+                          rel="popover"
+                          id="loginn"
+                          data-container="body"
+                          data-placement="top"
+                          data-html="true"
+                          data-trigger="hover"
+                          type="button">
+                    <i class="far fa-thumbs-up"></i>
+                      Like
+                  
+                    <div class="hide d-none" id="like-btn-loginn">
+                      <span class="like-btn-emoji">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                      <i class="fa fa-heart" aria-hidden="true"></i>
+                      <i class="fas fa-grin-beam like-btn-yellow-emoji" aria-hidden="true"></i>	 
+                      <i class="fas fa-meh-rolling-eyes like-btn-yellow-emoji" aria-hidden="true"></i>
+                      <i class="fas fa-sad-tear	like-btn-yellow-emoji" aria-hidden="true"></i>
+                      <i class="fas fa-angry like-btn-yellow-emoji" aria-hidden="true"></i>
+                      </span>
+                      </div>
+                  </button>
+                </div>
+
+                  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <button class="btn btn-outline-secondary border-0" type="button" title="Leave a comment" data-toggle="tooltip">
+                    <i class="far fa-comment-alt" aria-hidden="true"></i>
+                    Comment
+                  </button>
+                </div>
+                  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                  <button class="btn btn-outline-secondary border-0" type="button" title="Share this to friends or post it on your timeline." data-toggle="tooltip">
+                    <i class="fas fa-share" aria-hidden="true"></i>
+                    Share
+                  </button>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+              <div class="border-bottom"></div>
+          </div>
+
+          
+            <div class="cust-container-2 py-1">
+              <div class="btn-group most-relevent-button"
+                          data-toggle="popover"
+                          id="Login"
+                          data-container="body"
+                          data-placement="auto"
+                          data-html="true" >
+                <button type="button" class="btn btn-outline-secondary border-0 pr-0" onclick="mostRelevantBtnBorderFunc();">
+                  Most relevant
+                  <span class="dropdown-toggle border-0 pl-1 pr-2"></span>                       
+                </button>
+                <div class="hide d-none" id="mostReleventContentLogin">
+                  
+                  <div class="bg-white d-flex flex-column most-relevent-hidden-block px-1 pt-1">
+                    <h6 class="">Most Relevant</h6>
+                    <p class="">Comments form friends and those with the most views, reactions, replies and more appear at the top.</p>
+                    <h6 class="">New</h6>
+                    <p class="">New comments and those with new replies appear at the top.</p>
+                    <h6 class="">All comments</h6>
+                    <p class="">All comments including comments in foreign languages and potential spam are shown.</p>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            
+
+            
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+            <div class="cust-container-2 pb-2 pt-3">
+                <div class="row row-no-gutters">
+                  <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+                    <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' />
+                  </div>
+                  <form class="user-input-form-block pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
+                      <div class="input-group mb-3">
+                          <input class="form-control" type="text" placeholder="Write a comment..." spellcheck="true" role="textbox">
+                          <div class="input-group-append">
+                            
+                            <button class="btn" type="button">
+                                <i class="far fa-smile" aria-hidden="true"></i> 	
+                              </button>
+                              <button class="btn" type="button">
+                                  <i class="fas fa-camera" aria-hidden="true"></i>
+                                </button>
+                                <button class="btn" type="button">
+                                    <i class="fab fa-git-square" aria-hidden="true"></i>
+                                  </button>
+                                  <button class="btn" type="button">
+                                      <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                                    </button>
+                          </div>
+                        </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="cust-container-2 py-1 w-100">
+                <div class="showed-cmnt-block">
+                    <div class="d-flex">
+                        <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+                          <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' />
+                        </div>
+                        <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
+                            <label class="label-group mb-3 form-control border-0">
+                                <span class="mt-1"> comment </span>
+                            </label>
+                        </form>
+                      </div>
+                             
+                    </div>
+                    <div class="hidden-cmnt-block" id="hiddenCmntDivId">
+                              <div class="d-flex">
+                                  <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+                                    <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' />
+                                  </div>
+                                  <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
+                                      <label class="label-group mb-3 form-control border-0">
+                                          <span class="mt-1"> comment </span>
+                                      </label>
+                                  </form>
+                                </div>
+                          </div>
+
+
+
+              <div class="view-previous-comment-button btn-group py-1 dropdown w-100">
+                <button class="btn btn-outline-secondary border-0 w-100" type="button" role="button" onclick="viewPreviousCommentsFunc();">
+                   View previous comments
+                  <div class="dropdown-menu w-100" aria-labelledby="viewPreviousCommentsId">
+                    <div class="d-flex">
+                      <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+                        <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' />
+                      </div>
+                      <form class="user-input-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
+                          <label class="input-group mb-3 form-control border-0">
+                              <span class="mt-1 bg-light"> comment </span>
+                          </label>
+                      </form>
+                    </div>
+                    <div class="d-flex">
+                        <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+                          <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' />
+                        </div>
+                        <form class="user-input-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
+                            <label class="input-group mb-3 form-control border-0">
+                                <span class="mt-1 bg-light"> comment </span>
+                            </label>
+                        </form>
+                      </div>
+                      <div class="d-flex">
+                          <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
+                            img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' />
+                          </div>
+                          <form class="user-input-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
+                              <label class="input-group mb-3 form-control border-0">
+                                  <span class="mt-1 bg-light"> comment </span>
+                              </label>
+                          </form>
+                        </div>
+                        
+                  </div>
+                </button>
+              </div>
+              
+            </div>
+            
+          
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+      
+      
+
+  mostRelevantBtn: {
+    name: 'Most Relevant',
+    hiddenBlckId: 'mostReleventContentLogin',
+    hiddenBlck: [
+      {
+        h6: 'Most Relevant',
+        p: 'Comments form friends and those with the most views, reactions, replies and more appear at the top.'
+      },
+      {
+        h6: 'New',
+        P: 'New comments and those with new replies appear at the top.'
+      },
+      {
+        h6: 'All Comments',
+        p: 'All comments including comments in foreign languages and potential spam are shown.'
+      }
+    ]
+
+    navItems: [
+        {
+          name: 'Save Post',
+          url: '#',
+          saveIcon: 'fa fa-save'
+        },{
+          name: 'View edit history',
+          url: '#',
+        },{
+          name: 'Embed',
+          url: '#'
+        },{
+          name: 'Turn on notifications for post',
+          url: '#'
+        },{
+          name: 'Show in tab',
+          url: '#'
+        },{
+          name:'Give feedback on this post',
+          url:'#'
+        }
+      ]   
+
+
+      likeCmntShare: [
+      {
+        name: 'Like',
+        icon: 'far fa-thumbs-up',                
+        likeEmoji: {
+            heart: 'fa fa-heart',
+            grinBeam: 'fas fa-grin-beam',
+            rollingEyes: 'fas fa-meh-rolling-eyes',
+            sadTear: 'fas fa-sad-tear',
+            angry: 'fas fa-angry'
+          }
+      },{
+        name: 'Comment',
+        icon: 'far fa-comment-alt'
+      },{
+        name: 'Share',
+        icon: 'fas fa-share'
+      }
+    ],     
+
+
+    commentsBlock: {
+      userImg: 'https://thispersondoesnotexist.com/image',
+      writeCmntBlck: {
+        placeHolder: 'Write a comment...',
+        Icons: {
+          smileIcon: 'far fa-smile',
+          cameraIcon: 'fas fa-camera',
+          gitIcon: 'fab fa-git-square',
+          stickyNoteIcon: 'fa fa-sticky-note'
+        }
+      },
+
+
+      viewPreviousCmntsBtn: {
+        name: 'View Previous Comments',
+        funcName: 'viewPreviousCommentsFunc();'
+      }
+
+
+      fbPost.forEach(element => {
+    fbPostStrng += ` <header>
+    <section class="m-0 p-0 cust-outline-0 border-0 w-100 mw-100 h-auto">
+      <div class="container">
+        <div class="cust-container-2">
+          <nav class="navbar navbar-toggleable-sm navbar-toggleable-md navbar-toggleable-lg navbar-toggleable-xl navbar-light bg-faded" role="navigation">
+              <a class="navbar-brand d-flex mt-3" href="#">
+                  <img class="rounded-circle navbar-brand-img" alt="" src=${element.barbieLogoImg}>
+                  <div class="ml-3 d-flex flex-column">
+                      <h6 class="m-0 p-0">
+                          ${element.name}
+                          <span class="p-0 m-0"><img class="check-logo-img" src="images/fb-check-logo-1.png" alt=""></span>
+                        </h6>
+                        <p class="mt-1 p-0">${element.postDate}
+                          <span class=""><img class="earth-logo-img" src="images/earth-logo-img-1.png" alt=""></span>
                         </p>
                   </div>
                   
@@ -100,284 +463,23 @@
             <div class="cust-container-2">
               <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="d-flex flex-column">
-                  <p id="barbieHashtagId">
-                    For <span class="barbie-hashtag">
-                          <a href="#">#Barbie</a>
-                        </span> 
-                        movie time is always fun time! Which are you planning to watch with your bestie?
-                        <span id="blueHeartLogoImgId">
-                          <!-- <img class="blue-heart-logo-img" src="images/blue-heart-logo-1.png" alt /> -->
-                        </span>
+                  <p class="">
+                    For <span class="barbie-hashtag"><a href="#">${element.name}</a></span> ${element.discription}
+                    <span class=""><img class="blue-heart-logo-img" src="images/blue-heart-logo-1.png" alt=""></span>
                   </p>
                 </div>
             </div>
-            <span id="barbieMainImgId">
-              <!-- <img class="mw-100 w-100 h-auto" alt src="images/barbie-img-for-html.jpg" /> -->
-            </span>
-            <div class="cust-container-2 px-3 pt-3">
+            <img class="mw-100 w-100 h-auto" alt src="images/barbie-img-for-html.jpg" /> -->
+            <!-- <div class="cust-container-2 px-3 pt-3">
               <div class="d-flex">
                     <p class="mr-auto">13k</p>
-                    <p class="ml-auto">2.1K Comments  167 shares  133K views</p>
+                    <p class="ml-auto">${element.postPopularity.comments} Comments  ${element.postPopularity.shares} shares  ${element.postPopularity.views} views</p>
                 </div>
-            </div>
-
-            <div class="col-12 mx-auto">
-              <div class="container">
-                <div class="border-bottom"></div>
-              </div>
-            </div>
-
-            
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="cust-container-2 py-3 like-cmnt-share-btn-group">
-                <div class="row justify-content-between btn-group text-center" id="likeCmntShareBtnGroupId">
-                
-
-                  <!-- <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <button class="btn btn-outline-secondary border-0 " 
-                          rel="popover"
-                          id="loginn"
-                          data-container="body"
-                          data-placement="top"
-                          data-html="true"
-                          data-trigger="hover"
-                          type="button">
-                    <i class="far fa-thumbs-up"></i>
-                      Like
-                  
-                    <div class="hide d-none" id="like-btn-loginn">
-                      <span class="like-btn-emoji">
-                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                      <i class="fa fa-heart" aria-hidden="true"></i>
-                      <i class="fas fa-grin-beam like-btn-yellow-emoji" aria-hidden="true"></i>	 
-                      <i class="fas fa-meh-rolling-eyes like-btn-yellow-emoji" aria-hidden="true"></i>
-                      <i class="fas fa-sad-tear	like-btn-yellow-emoji" aria-hidden="true"></i>
-                      <i class="fas fa-angry like-btn-yellow-emoji" aria-hidden="true"></i>
-                      </span>
-                      </div>
-                  </button>
-                </div>
-
-                        function likeBtnPopoverFunc(){
-                              $("[rel=popover]").each(function(i, obj) {
-                                  $(this).popover({
-                                    html: true,
-                                    content: function() {
-                                        var id2 = $(this).attr('id') 
-                                  return $('#like-btn-' + id2).html();
-                                      }
-                                    });
-                                });
-                            }
-
-                        
+            </div> -->
 
 
-                  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <button class="btn btn-outline-secondary border-0" type="button" title="Leave a comment" data-toggle="tooltip">
-                    <i class="far fa-comment-alt" aria-hidden="true"></i>
-                    Comment
-                  </button>
-                </div>
-                  <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                  <button class="btn btn-outline-secondary border-0" type="button" title="Share this to friends or post it on your timeline." data-toggle="tooltip">
-                    <i class="fas fa-share" aria-hidden="true"></i>
-                    Share
-                  </button>
-                </div> -->
-              </div>
-          </div>
-        </div>
 
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
-              <div class="border-bottom"></div>
-          </div>
-
-          
-            <div class="cust-container-2 py-1">
-              <div class="btn-group most-relevent-button"
-                          data-toggle="popover"
-                          id="Login"
-                          data-container="body"
-                          data-placement="auto"
-                          data-html="true" >
-                <button type="button" class="btn btn-outline-secondary border-0 pr-0" onclick="mostRelevantBtnBorderFunc();">
-                  Most relevant
-                  <span class="dropdown-toggle border-0 pl-1 pr-2"></span>                       
-                </button>
-                <div class="hide d-none" id="mostReleventContentLogin">
-                  
-                  <div class="bg-white d-flex flex-column most-relevent-hidden-block px-1 pt-1">
-                    <h6 class="">Most Relevant</h6>
-                    <p class="">Comments form friends and those with the most views, reactions, replies and more appear at the top.</p>
-                    <h6 class="">New</h6>
-                    <p class="">New comments and those with new replies appear at the top.</p>
-                    <h6 class="">All comments</h6>
-                    <p class="">All comments including comments in foreign languages and potential spam are shown.</p>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </div>
-            
-
-            
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
-            <div class="cust-container-2 pb-2 pt-3">
-                <div class="row row-no-gutters">
-                  <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                    <!-- <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' /> -->
-                  </div>
-                  <form class="user-input-form-block pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                      <div class="input-group mb-3">
-                          <input class="form-control" type="text" placeholder="Write a comment..." spellcheck="true" role="textbox">
-                          <div class="input-group-append">
-                            
-                            <button class="btn" type="button">
-                                <i class="far fa-smile" aria-hidden="true"></i> 	
-                              </button>
-                              <button class="btn" type="button">
-                                  <i class="fas fa-camera" aria-hidden="true"></i>
-                                </button>
-                                <button class="btn" type="button">
-                                    <i class="fab fa-git-square" aria-hidden="true"></i>
-                                  </button>
-                                  <button class="btn" type="button">
-                                      <i class="fa fa-sticky-note" aria-hidden="true"></i>
-                                    </button>
-                          </div>
-                        </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-            
-            <div class="cust-container-2 py-1 w-100">
-                <div class="showed-cmnt-block">
-                    <div class="d-flex">
-                        <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                          <!--  <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' /> -->
-                        </div>
-                        <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                            <label class="label-group mb-3 form-control border-0">
-                                <span class="mt-1"> comment </span>
-                            </label>
-                        </form>
-                      </div>
-                      <div class="d-flex">
-                          <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                            <!--  <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' /> -->
-                          </div>
-                          <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                              <label class="label-group mb-3 form-control border-0">
-                                  <span class="mt-1"> comment </span>
-                              </label>
-                          </form>
-                        </div>
-                        <div class="d-flex">
-                            <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                              <!--  <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' /> -->
-                            </div>
-                            <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                                <label class="label-group mb-3 form-control border-0">
-                                    <span class="mt-1"> comment </span>
-                                </label>
-                            </form>
-                          </div>
-                          <div class="d-flex">
-                              <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                                <!--  <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' /> -->
-                              </div>
-                              <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                                  <label class="label-group mb-3 form-control border-0">
-                                      <span class="mt-1"> comment </span>
-                                  </label>
-                              </form>
-                            </div>
-                            <div class="d-flex">
-                                <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                                  <!--  <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' /> -->
-                                </div>
-                                <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                                    <label class="label-group mb-3 form-control border-0">
-                                        <span class="mt-1"> comment </span>
-                                    </label>
-                                </form>
-                              </div>
-                             
-                          </div>
-                          <div class="hidden-cmnt-block" id="hiddenCmntDivId">
-                              <div class="d-flex">
-                                  <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                                    <!--  <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' /> -->
-                                  </div>
-                                  <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                                      <label class="label-group mb-3 form-control border-0">
-                                          <span class="mt-1"> comment </span>
-                                      </label>
-                                  </form>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                                      <!--  <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' /> -->
-                                    </div>
-                                    <form class="user-label-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                                        <label class="label-group mb-3 form-control border-0">
-                                            <span class="mt-1"> comment </span>
-                                        </label>
-                                    </form>
-                                  </div>
-                          </div>
-              <div class="view-previous-comment-button btn-group py-1 dropdown w-100">
-                <button class="btn btn-outline-secondary border-0 w-100" type="button" role="button" onclick="viewPreviousCommentsFunc();">
-                   View previous comments
-                  <!-- <div class="dropdown-menu w-100" aria-labelledby="viewPreviousCommentsId">
-                    <div class="d-flex">
-                      <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                        <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' />
-                      </div>
-                      <form class="user-input-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                          <label class="input-group mb-3 form-control border-0">
-                              <span class="mt-1 bg-light"> comment </span>
-                          </label>
-                      </form>
-                    </div>
-                    <div class="d-flex">
-                        <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                          <img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' />
-                        </div>
-                        <form class="user-input-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                            <label class="input-group mb-3 form-control border-0">
-                                <span class="mt-1 bg-light"> comment </span>
-                            </label>
-                        </form>
-                      </div>
-                      <div class="d-flex">
-                          <div class="fb-user-img col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">
-                            img class="rounded-circle" alt src='https://thispersondoesnotexist.com/image' />
-                          </div>
-                          <form class="user-input-form-block dropdown-cmnt-input pt-2 col-10 col-sm-10 col-md-10 col-lg-11 col-xl-11 pl-0 pl-sm-0 pl-md-0 pl-lg-2 pl-xl-0">
-                              <label class="input-group mb-3 form-control border-0">
-                                  <span class="mt-1 bg-light"> comment </span>
-                              </label>
-                          </form>
-                        </div>
-                        
-                  </div> -->
-                </button>
-              </div>
-              
-            </div>
-            
-          
-          </div>
-        </div>
-      </section>
-    </article>
-  </main>
-      
-      
+  
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
